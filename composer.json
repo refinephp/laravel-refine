@@ -1,0 +1,17 @@
+{
+    "name": "refinephp/laravel-refine",
+    "description": "A Laravel package for elegant and efficient query filtering and sorting.",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Refinephp\\LaravelRefine\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ricardo Di Zio",
+            "email": "ricardodizio@gmail.com"
+        }
+    ],
+    "require": {}
+}
