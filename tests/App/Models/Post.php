@@ -10,12 +10,20 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Refinephp\LaravelRefine\Traits\Includeable;
 
 class Post extends Model
 {
     use HasFactory;
     use Filterable;
     use Sortable;
+    use Includeable;
+
+    protected $allowedIncludes = [
+        'comments',
+        'user',
+        'tags',
+    ];
 
     protected $fillable = [
         'title',
