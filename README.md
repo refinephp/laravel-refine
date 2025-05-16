@@ -28,3 +28,23 @@ class User extends Model
     use Filterable;
 }
 ```
+
+Following that, you can use the `filter` method to filter your query results in your controller:
+
+```php
+use App\Models\User;
+
+class UserController extends Controller
+{
+    public function index()
+    {
+        return User::filter()->get();
+    }
+}
+```
+
+From your request, you can pass the filter parameters as query string parameters. For example:
+
+```http
+GET /users?filters[name][$eq]=John&filters[age][$eq]=30
+```
