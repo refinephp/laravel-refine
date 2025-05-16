@@ -28,7 +28,7 @@ class IncludeableTest extends TestCase
         ]);
 
         Route::get('/posts', function () {
-            return Post::WithIncludes()->get();;
+            return Post::WithIncludes()->get();
         });
     }
 
