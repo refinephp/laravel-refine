@@ -36,7 +36,6 @@ class IncludeableTest extends TestCase
     public function it_includes_specified_relationships(): void
     {
         $response = $this->getJson("/posts?includes=comment");
-        dd($response->json());
         assertTrue($response->collect()->pluck('comments')->isNotEmpty());
     }
 }
